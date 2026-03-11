@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beiyuan Tech Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', 'Georgia', serif;
+        }
+        .view {
+            display: none;
+        }
+        .view.active {
+            display: block;
+        }
+        .rose-gradient {
+            background: linear-gradient(135deg, #881337 0%, #9f1239 50%, #7f1d1d 100%);
+        }
+        .petal-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M40 40c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm20 0c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-rose-50">
+    <nav class="bg-rose-800 text-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-rose-400 rounded-full flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6 text-rose-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold">Beiyuan Tech Portal</span>
+                        <p class="text-rose-300 text-xs">shenzhenshibeiyuankejiyouxiangongsi</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <a href="#" onclick="showView('home')" class="px-5 py-2 rounded-full text-sm font-semibold bg-rose-700 text-white hover:bg-rose-600 transition">Portal</a>
+                    <a href="#" onclick="showView('privacy')" class="px-5 py-2 rounded-full text-sm font-medium text-rose-200 hover:bg-rose-700 hover:text-white transition">Privacy</a>
+                    <a href="#" onclick="showView('terms')" class="px-5 py-2 rounded-full text-sm font-medium text-rose-200 hover:bg-rose-700 hover:text-white transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home-view" class="view active">
+            <div class="rose-gradient petal-pattern min-h-[calc(100vh-64px)] flex items-center">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+                    <div class="max-w-md mx-auto">
+                        <div class="text-center mb-8 text-white">
+                            <div class="inline-flex items-center px-4 py-2 bg-rose-900/80 rounded-full border border-rose-300/50 mb-6">
+                                <span class="w-2 h-2 bg-rose-200 rounded-full mr-2 animate-pulse"></span>
+                                <span class="text-white text-sm font-medium">Technology Management System</span>
+                            </div>
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white drop-shadow-lg">
+                                Beiyuan Tech Portal
+                            </h1>
+                            <p class="text-white text-lg mb-8 leading-relaxed drop-shadow-md">
+                                Advanced technology platform for shenzhenshibeiyuankejiyouxiangongsi. Secure access to internal systems and operations.
+                            </p>
+                            <div class="grid grid-cols-3 gap-4 mb-8">
+                                <div class="bg-rose-900/80 backdrop-blur rounded-xl p-4 border border-rose-300/50">
+                                    <div class="text-2xl font-bold text-white">256</div>
+                                    <div class="text-rose-100 text-xs">Bit AES</div>
+                                </div>
+                                <div class="bg-rose-900/80 backdrop-blur rounded-xl p-4 border border-rose-300/50">
+                                    <div class="text-2xl font-bold text-white">100%</div>
+                                    <div class="text-rose-100 text-xs">Internal</div>
+                                </div>
+                                <div class="bg-rose-900/80 backdrop-blur rounded-xl p-4 border border-rose-300/50">
+                                    <div class="text-2xl font-bold text-white">Zero</div>
+                                    <div class="text-rose-100 text-xs">Sharing</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl shadow-2xl p-8">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-rose-400 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                    </svg>
+                                </div>
+                                <h2 class="text-2xl font-bold text-gray-800">Employee Access</h2>
+                                <p class="text-gray-500 text-sm mt-1">Secure authentication required</p>
+                            </div>
+
+                            <div class="bg-rose-100 border-2 border-rose-300 rounded-xl p-4 mb-6">
+                                <div class="flex items-start">
+                                    <svg class="w-5 h-5 text-rose-800 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div>
+                                        <p class="text-rose-900 font-bold text-sm">Restricted Access</p>
+                                        <p class="text-rose-800 text-xs mt-1 font-medium">This portal is exclusively for authorized employees of shenzhenshibeiyuankejiyouxiangongsi.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form class="space-y-5">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Employee ID</label>
+                                    <input type="text" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition" placeholder="Enter your employee ID">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                                    <input type="password" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition" placeholder="Enter your password">
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="w-4 h-4 text-rose-600 border-gray-300 rounded focus:ring-rose-500">
+                                        <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                                    </label>
+                                    <a href="#" class="text-sm text-rose-600 hover:text-rose-800 font-medium">Forgot?</a>
+                                </div>
+                                <button type="submit" class="w-full bg-rose-800 text-white py-3 rounded-xl font-bold hover:bg-rose-700 transition shadow-lg">
+                                    Access Portal
+                                </button>
+                            </form>
+
+                            <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+                                <p class="text-xs text-gray-500">
+                                    Technical support<br>
+                                    <a href="mailto:beiyuan202602@163.com" class="text-rose-600 hover:text-rose-800 font-semibold">beiyuan202602@163.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy-view" class="view">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-rose-800 to-rose-700 px-8 py-8">
+                        <h1 class="text-3xl font-bold text-white">Privacy Policy</h1>
+                        <p class="text-rose-200 mt-2">Effective: March 2024</p>
+                    </div>
+
+                    <div class="p-8 md:p-12 space-y-8">
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">1. Policy Statement</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                The Beiyuan Tech Portal privacy documentation outlines how shenzhenshibeiyuankejiyouxiangongsi collects, processes, and protects data within our proprietary technology infrastructure. By utilizing this system, you acknowledge acceptance of these practices.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">2. Data Types</h2>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Our technology platform manages various information categories:
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center p-4 bg-rose-50 rounded-xl border border-rose-100">
+                                    <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center mr-4">
+                                        <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Employee Information</h4>
+                                        <p class="text-gray-500 text-sm">User credentials, access rights, activity logs</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-rose-50 rounded-xl border border-rose-100">
+                                    <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center mr-4">
+                                        <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Operational Data</h4>
+                                        <p class="text-gray-500 text-sm">System logs, technical metrics, performance data</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-4 bg-rose-50 rounded-xl border border-rose-100">
+                                    <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center mr-4">
+                                        <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Business Intelligence</h4>
+                                        <p class="text-gray-500 text-sm">Analytics, reports, strategic insights</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">3. Usage Objectives</h2>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Information processing is conducted exclusively for internal operational needs:
+                            </p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 text-rose-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Facilitating technology operations and maintenance
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 text-rose-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Supporting decision-making processes
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 text-rose-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Ensuring regulatory adherence
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">4. Security Measures</h2>
+                            <div class="bg-rose-50 rounded-xl p-6 border border-rose-100">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <div class="flex items-center mb-2">
+                                            <svg class="w-5 h-5 text-rose-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                            </svg>
+                                            <span class="font-semibold text-gray-800">AES-256 Encryption</span>
+                                        </div>
+                                        <p class="text-gray-600 text-sm">All data is protected using 256-bit Advanced Encryption Standard technology.</p>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center mb-2">
+                                            <svg class="w-5 h-5 text-rose-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                            </svg>
+                                            <span class="font-semibold text-gray-800">Access Management</span>
+                                        </div>
+                                        <p class="text-gray-600 text-sm">Role-based permissions restrict data access to authorized personnel only.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">5. Data Sharing</h2>
+                            <div class="bg-rose-800 rounded-xl p-6 text-white">
+                                <p class="font-bold text-lg mb-2">Internal Use Only - No External Distribution</p>
+                                <p class="text-rose-100 text-sm">
+                                    shenzhenshibeiyuankejiyouxiangongsi does not share, sell, or transfer any information to external parties. All data remains within our organizational boundaries.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">6. Contact Details</h2>
+                            <div class="bg-gray-100 rounded-xl p-4">
+                                <p class="font-semibold text-gray-800">shenzhenshibeiyuankejiyouxiangongsi</p>
+                                <p class="text-gray-600 mt-2">Privacy inquiries: <a href="mailto:beiyuan202602@163.com" class="text-rose-600 hover:text-rose-800">beiyuan202602@163.com</a></p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms-view" class="view">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-rose-800 to-rose-700 px-8 py-8">
+                        <h1 class="text-3xl font-bold text-white">Terms of Service</h1>
+                        <p class="text-rose-200 mt-2">Effective: March 2024</p>
+                    </div>
+
+                    <div class="p-8 md:p-12 space-y-8">
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">1. Agreement</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Using the Beiyuan Tech Portal indicates your acceptance of these Terms of Service. You affirm that you are an authorized employee of shenzhenshibeiyuankejiyouxiangongsi. Discontinue use if you do not agree to these terms.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">2. Authorized Use</h2>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                This portal supports the business operations of shenzhenshibeiyuankejiyouxiangongsi:
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 rounded-xl p-4 border border-green-200">
+                                    <h4 class="font-semibold text-green-800 mb-2">Permitted</h4>
+                                    <ul class="text-green-700 text-sm space-y-1">
+                                        <li>• Accessing assigned systems</li>
+                                        <li>• Performing work-related tasks</li>
+                                        <li>• Generating authorized reports</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-red-50 rounded-xl p-4 border border-red-200">
+                                    <h4 class="font-semibold text-red-800 mb-2">Prohibited</h4>
+                                    <ul class="text-red-700 text-sm space-y-1">
+                                        <li>• Credential sharing</li>
+                                        <li>• Unauthorized access attempts</li>
+                                        <li>• Personal use of resources</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">3. Security Responsibilities</h2>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                You must protect your account:
+                            </p>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-rose-600 font-bold text-sm">1</span>
+                                    Create strong passwords with at least 12 characters
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-rose-600 font-bold text-sm">2</span>
+                                    Do not share login credentials
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-6 h-6 bg-rose-100 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 text-rose-600 font-bold text-sm">3</span>
+                                    Report security issues promptly
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">4. Confidentiality</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                All portal content is proprietary to shenzhenshibeiyuankejiyouxiangongsi. Unauthorized copying, distribution, or disclosure is strictly prohibited.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">5. Activity Monitoring</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Portal activities are logged and monitored for security and compliance. Usage implies consent to monitoring. Violations may lead to disciplinary action.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">6. Service Modifications</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                shenzhenshibeiyuankejiyouxiangongsi aims for high availability but does not guarantee uninterrupted service. We reserve the right to modify or discontinue features.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">7. Limitation of Liability</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                To the maximum extent permitted by law, shenzhenshibeiyuankejiyouxiangongsi shall not be liable for indirect, incidental, or consequential damages arising from portal use.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h2 class="text-xl font-bold text-rose-800 mb-4">8. Contact</h2>
+                            <div class="bg-gray-100 rounded-xl p-4">
+                                <p class="font-semibold text-gray-800">shenzhenshibeiyuankejiyouxiangongsi</p>
+                                <p class="text-gray-600 mt-2">Terms inquiries: <a href="mailto:beiyuan202602@163.com" class="text-rose-600 hover:text-rose-800">beiyuan202602@163.com</a></p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-rose-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-rose-400 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-rose-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <span class="font-bold">Beiyuan Tech Portal</span>
+                    </div>
+                    <p class="text-rose-300 text-sm max-w-md">
+                        shenzhenshibeiyuankejiyouxiangongsi - Internal technology platform. All rights reserved.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showView('privacy')" class="text-rose-300 hover:text-white text-sm transition">Privacy Policy</a></li>
+                        <li><a href="#" onclick="showView('terms')" class="text-rose-300 hover:text-white text-sm transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Support</h4>
+                    <p class="text-rose-300 text-sm">
+                        <a href="mailto:beiyuan202602@163.com" class="hover:text-white transition">beiyuan202602@163.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-rose-700 mt-8 pt-8 text-center">
+                <p class="text-rose-400 text-sm">&copy; 2024 shenzhenshibeiyuankejiyouxiangongsi. Internal use only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showView(viewName) {
+            var views = document.querySelectorAll('.view');
+            views.forEach(function(view) {
+                view.classList.remove('active');
+            });
+            var targetView = document.getElementById(viewName + '-view');
+            if (targetView) {
+                targetView.classList.add('active');
+            }
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
